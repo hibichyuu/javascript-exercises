@@ -1,8 +1,8 @@
 const sumAll = function(min, max) {
 
-    let sum = -1;
+    if(!Number.isInteger(min) || !Number.isInteger(max) || min < 0 || max < 0) return 'ERROR';
 
-    if(Number.isInteger(min) && Number.isInteger(max) && min >= 0 && max >= 0){
+        let sum = 0;
 
         if(min > max){
             const temp = min;
@@ -13,9 +13,9 @@ const sumAll = function(min, max) {
         for(let i = min ; i <= max; i++){
             sum += i;
         }
-    }
+    
 
-    return (sum == -1) ? 'ERROR': sum + 1;
+    return sum;
 };
 
 // Do not edit below this line
